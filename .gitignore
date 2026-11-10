@@ -3,4 +3,6 @@ dist
 out
 *.log*
 .gitignore
-config.bat
+
+.env*
+!.env.example

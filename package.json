@@ -11,13 +11,13 @@
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
-    "start": "node init && electron-vite preview",
-    "dev": "node init && electron-vite dev",
-    "build": "node init && npm run typecheck && electron-vite build",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
     "postinstall": "electron-builder install-app-deps",
-    "build:win": "node init && npm run build && electron-builder --win --config",
-    "build:mac": "node init && electron-vite build && electron-builder --mac --config",
-    "build:linux": "node init && electron-vite build && electron-builder --linux --config"
+    "build:win": "npm run build && electron-builder --win --config",
+    "build:mac": "electron-vite build && electron-builder --mac --config",
+    "build:linux": "electron-vite build && electron-builder --linux --config"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
